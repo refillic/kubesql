@@ -13,4 +13,12 @@ To generate the parser just run
 goyacc -o sqlparser/parser.go sqlparser/sql-grammar.y
 ```
 
-Make sure you have `goyacc` installed (https://pkg.go.dev/golang.org/x/tools/cmd/goyacc?utm_source=godoc)
+Make sure you have `goyacc` installed (https://pkg.go.dev/golang.org/x/tools/cmd/goyacc?utm_source=godoc). Intructions on how to install it can be found [here](https://cs.opensource.google/go/x/tools).
+
+## Testing
+
+To run tests just run
+
+```bash
+go test
+```
