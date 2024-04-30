@@ -15,10 +15,17 @@ workflow:
   - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
   - when: never
 
+.base:
+  before_script:
+    - go install golang.org/x/tools/cmd/goyacc@latest
+
 test:
   stage: test
   image: public.ecr.aws/docker/library/golang:1.22.2
+  extends:
+    - .base
   script:
+    - goyacc -o sqlparser/parser.go sqlparser/sql-grammar.y
     - go test
 
 sast:

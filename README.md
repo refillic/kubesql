@@ -2,6 +2,10 @@
 
 A simple CLI app that allows you to query Kubernetes with SQL.
 
+## Prerequisites
+
+* [Just](https://github.com/casey/just) for build scripts
+* [goyacc](https://pkg.go.dev/golang.org/x/tools/cmd/goyacc?utm_source=godoc) for generating our SQL parser
 
 ## SQL Parser
 
@@ -10,7 +14,7 @@ We use [`goyacc`](https://pkg.go.dev/golang.org/x/tools/cmd/goyacc?utm_source=go
 To generate the parser just run
 
 ```bash
-goyacc -o sqlparser/parser.go sqlparser/sql-grammar.y
+just generate-parser
 ```
 
 Make sure you have `goyacc` installed (https://pkg.go.dev/golang.org/x/tools/cmd/goyacc?utm_source=godoc). Intructions on how to install it can be found [here](https://cs.opensource.google/go/x/tools).
@@ -20,5 +24,5 @@ Make sure you have `goyacc` installed (https://pkg.go.dev/golang.org/x/tools/cmd
 To run tests just run
 
 ```bash
-go test
+just test
 ```
