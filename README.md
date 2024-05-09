@@ -17,7 +17,7 @@ To generate the parser just run
 just generate-parser
 ```
 
-Make sure you have `goyacc` installed (https://pkg.go.dev/golang.org/x/tools/cmd/goyacc?utm_source=godoc). Intructions on how to install it can be found [here](https://cs.opensource.google/go/x/tools).
+Make sure you have [goyacc](https://pkg.go.dev/golang.org/x/tools/cmd/goyacc?utm_source=godoc) installed. Instructions on how to install it can be found [here](https://cs.opensource.google/go/x/tools).
 
 ## Testing
 
