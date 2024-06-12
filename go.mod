@@ -1,3 +1,3 @@
-module gitlab.betgenius.net/aws-portfolio-devops/gsg-gsm/gsm/prototypes/kubesql
+module github.com/refillic/kubesql
 
 go 1.22.1
